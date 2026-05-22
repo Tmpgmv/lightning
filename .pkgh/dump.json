@@ -252,6 +252,42 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add revenue",
+        "content_type": 8,
+        "codename": "add_revenue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change revenue",
+        "content_type": 8,
+        "codename": "change_revenue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete revenue",
+        "content_type": 8,
+        "codename": "delete_revenue"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view revenue",
+        "content_type": 8,
+        "codename": "view_revenue"
+    }
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
@@ -308,6 +344,14 @@
     }
 },
 {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "revenue",
+        "model": "revenue"
+    }
+},
+{
     "model": "drivers.driver",
     "pk": 1,
     "fields": {
@@ -338,6 +382,69 @@
         "last_name": "Петров",
         "phone": 74628475943,
         "birthday": "1997-05-05"
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 1,
+    "fields": {
+        "datetime": "2026-11-30T21:00:00Z",
+        "amount": "1500.00",
+        "driver": 1
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 2,
+    "fields": {
+        "datetime": "2026-12-01T21:00:00Z",
+        "amount": "3000.00",
+        "driver": 1
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 3,
+    "fields": {
+        "datetime": "2026-12-14T21:00:00Z",
+        "amount": "100.00",
+        "driver": 2
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 4,
+    "fields": {
+        "datetime": "2026-12-13T21:00:00Z",
+        "amount": "2000.00",
+        "driver": 2
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 5,
+    "fields": {
+        "datetime": "2026-12-14T21:00:00Z",
+        "amount": "3000.00",
+        "driver": 3
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 6,
+    "fields": {
+        "datetime": "2026-12-15T21:00:00Z",
+        "amount": "1000.00",
+        "driver": 3
+    }
+},
+{
+    "model": "revenue.revenue",
+    "pk": 7,
+    "fields": {
+        "datetime": "2026-12-15T21:00:00Z",
+        "amount": "1800.00",
+        "driver": 3
     }
 }
 ]
