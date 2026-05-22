@@ -1,7 +1,9 @@
-from django.views.generic import TemplateView  # PREP
+from django.views.generic import TemplateView, ListView  # PREP
+
+from drivers.models import Driver
 
 
-class HomeView(TemplateView):  # PREP
+class HomeView(ListView):  # PREP
     """
     PREP
     Редактировать данный файл по необходимости.
@@ -11,3 +13,4 @@ class HomeView(TemplateView):  # PREP
     """
 
     template_name = "home/home.html"  # PREP
+    model = Driver
