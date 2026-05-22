@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     "accounts",
     # } PREP
 
-    # STUD! {    
+    # STUD! {
+    "drivers",
     # } STUD!
 
     # PREP {
