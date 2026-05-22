@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     # STUD! {
     "drivers",
+    "revenue",
     # } STUD!
 
     # PREP {
