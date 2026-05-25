@@ -31,5 +31,9 @@ class Driver(models.Model):
     def get_update_url(self):
         return reverse_lazy("driver-update", kwargs={"pk": self.pk})
 
+
+    def get_revenue_url(self):
+        return reverse_lazy("driver-revenue", kwargs={"pk": self.pk})
+
     class Meta:
         ordering = ["last_name", "first_name", ]
