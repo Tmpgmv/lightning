@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse_lazy
 
 
 class Driver(models.Model):
@@ -13,11 +14,10 @@ class Driver(models.Model):
 
     def get_phone(self):
         return "+{}-{}-{}-{}-{}".format(str(self.phone)[0],
-                                       str(self.phone)[1:4],
-                                       str(self.phone)[4:7],
-                                       str(self.phone)[7:9],
-                                       str(self.phone)[9:11], )
-
+                                        str(self.phone)[1:4],
+                                        str(self.phone)[4:7],
+                                        str(self.phone)[7:9],
+                                        str(self.phone)[9:11], )
 
     def get_revenue(self):
         # PKGH Подсчет выручки ваодителя.
@@ -27,6 +27,9 @@ class Driver(models.Model):
         for record in records:
             amount += record.amount
         return amount
+
+    def get_update_url(self):
+        return reverse_lazy("driver-update", kwargs={"pk": self.pk})
 
     class Meta:
         ordering = ["last_name", "first_name", ]
