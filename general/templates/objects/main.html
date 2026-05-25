@@ -36,9 +36,9 @@ https://getbootstrap.com/docs/5.3/utilities/spacing/#gap
         <p>Выручка</p>
         <p>{{ object.get_revenue }} руб.</p>
 
-        {% if user.is_superuser %}
-            {% comment %}<a class="btn del-button position-absolute z-3" href="{{ object.get_delete_url }}">{% bs_icon 'trash' %}</a>{% endcomment %}
-        {% endif %}
+
+        <a class="btn attention position-absolute z-3" href="{{ object.get_revenue_url }}">Выручка</a>
+
     </div>
 
     <a href="{{ object.get_update_url }}" class="stretched-link"></a>
