@@ -23,7 +23,7 @@ from django.urls import path, include
 from django.conf import settings  # PREP
 from django.conf.urls.static import static  # PREP
 
-from general.views import DriverCreateView
+from drivers.views import DriverCreateView
 from home.views import HomeView
 
 urlpatterns = [
