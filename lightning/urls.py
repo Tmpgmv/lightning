@@ -25,6 +25,7 @@ from django.conf.urls.static import static  # PREP
 
 from drivers.views import DriverCreateView, DriverUpdateView
 from home.views import HomeView
+from revenue.views import RevenueListView
 
 urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
@@ -32,6 +33,7 @@ urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("drivers/new", DriverCreateView.as_view(), name="new-driver"),
     path("drivers/<int:pk>/update", DriverUpdateView.as_view(), name="driver-update"),
+    path("drivers/<int:pk>/revenue", RevenueListView.as_view(), name="driver-revenue"),
     
     path("admin/", admin.site.urls),
 ]
