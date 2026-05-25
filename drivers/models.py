@@ -12,7 +12,7 @@ class Driver(models.Model):
         return f"{self.last_name} {self.first_name} {self.patronymic_name}"
 
     def get_phone(self):
-        return "{}-{}-{}-{}-{}".format(str(self.phone)[0],
+        return "+{}-{}-{}-{}-{}".format(str(self.phone)[0],
                                        str(self.phone)[1:4],
                                        str(self.phone)[4:7],
                                        str(self.phone)[7:9],
