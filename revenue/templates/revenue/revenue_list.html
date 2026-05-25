@@ -2,20 +2,10 @@
 {% load static %}
 
 {% block title %}
-    {% if object %}
-        Редактирование : {{ object.pk }}
-    {% else %}
-        Добавление 
-    {% endif %}
     Выручка водителя: {{ object_list.first.driver }}
 {% endblock %}
 
 {% block h %}
-    {% if object %}
-        Редактирование : {{ object.pk }}
-    {% else %}
-        Добавление 
-    {% endif %}
     Выручка водителя: {{ object_list.first.driver }}
 {% endblock %}
 
