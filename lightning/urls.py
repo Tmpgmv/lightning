@@ -23,12 +23,14 @@ from django.urls import path, include
 from django.conf import settings  # PREP
 from django.conf.urls.static import static  # PREP
 
+from general.views import DriverCreateView
 from home.views import HomeView
 
 urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     
     path("", HomeView.as_view(), name="home"),
+    path("drivers/new", DriverCreateView.as_view(), name="new-driver"),
     
     path("admin/", admin.site.urls),
 ]
