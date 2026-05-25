@@ -12,4 +12,4 @@ class DriverCreateView(SuccessMessageMixin,
     model = Driver
     form_class = DriverForm
     success_url = reverse_lazy("home")
-    success_message = "Информация о водителе добавлена"
+    success_message = "Информация о водителе сохранена"
