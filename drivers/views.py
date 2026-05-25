@@ -10,4 +10,4 @@ class DriverCreateView(SuccessMessageMixin,
     model = Driver
     fields = "__all__"
     success_url = reverse_lazy("home")
-    success_message = "Информация о водителе добавлена"
+    success_message = "Информация о водителе сохранена"
