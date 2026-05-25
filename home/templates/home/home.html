@@ -11,6 +11,7 @@
 {% endblock %}
 
 {% block content %}
+    <a href="{% url 'new-driver' %}" class="btn attention">Добавить водителя</a>
     {% for object in object_list %}
         {% include 'objects/main.html' %}
     {% endfor %}
