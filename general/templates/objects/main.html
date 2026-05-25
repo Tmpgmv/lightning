@@ -33,7 +33,8 @@ https://getbootstrap.com/docs/5.3/utilities/spacing/#gap
         <p>{{ object.birthday }}</p>
     </div>
     <div class="p-2 me-3 mt-3 attention-border position-relative text-center">
-        <p>Grid item 2</p>
+        <p>Выручка</p>
+        <p>{{ object.get_revenue }} руб.</p>
 
         {% if user.is_superuser %}
             {% comment %}<a class="btn del-button position-absolute z-3" href="{{ object.get_delete_url }}">{% bs_icon 'trash' %}</a>{% endcomment %}

@@ -18,5 +18,15 @@ class Driver(models.Model):
                                        str(self.phone)[7:9],
                                        str(self.phone)[9:11], )
 
+
+    def get_revenue(self):
+        # PKGH Подсчет выручки ваодителя.
+        records = self.revenue_set.all()
+        amount = 0
+
+        for record in records:
+            amount += record.amount
+        return amount
+
     class Meta:
         ordering = ["last_name", "first_name", ]
