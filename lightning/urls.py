@@ -23,7 +23,7 @@ from django.urls import path, include
 from django.conf import settings  # PREP
 from django.conf.urls.static import static  # PREP
 
-from drivers.views import DriverCreateView
+from drivers.views import DriverCreateView, DriverUpdateView
 from home.views import HomeView
 
 urlpatterns = [
@@ -31,6 +31,7 @@ urlpatterns = [
     
     path("", HomeView.as_view(), name="home"),
     path("drivers/new", DriverCreateView.as_view(), name="new-driver"),
+    path("drivers/<int:pk>/update", DriverUpdateView.as_view(), name="driver-update"),
     
     path("admin/", admin.site.urls),
 ]
